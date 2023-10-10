@@ -1,14 +1,17 @@
 {
-  "name": "@saurav1905/zod-message-package",
+  "name": "@airsurfer09/zod-message-package",
   "version": "0.0.1",
   "description": "trail zod message package",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap",
     "lint": "tsc",
-    "dev":"vitest",
-    "test":"vitest run",
-    "ci":"pnpm run lint && pnpm run test && pnpm run build"
+    "dev": "vitest",
+    "test": "vitest run",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run ci && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/Saurav1905/zod-message-package#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/jest": "^29.5.5",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
