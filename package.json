@@ -1,8 +1,8 @@
 {
   "name": "@airsurfer09/zod-message-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "trail zod message package",
-  "private":"false",
+  "private": "false",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
